@@ -1,8 +1,8 @@
-import uuid
+fromuid
 from datetime import datetime, date
 from sqlalchemy import String, Text, Boolean, Date, DateTime, ForeignKey, UniqueConstraint, JSON, func
 from sqlalchemy.orm import Mapped, mapped_column
-from .db import Base
+from db import Base
 
 class User(Base):
     __tablename__='users'
