@@ -1,4 +1,4 @@
-from uuid import uuid4
+import uuid
 from datetime import datetime, date
 from sqlalchemy import String, Text, Boolean, Date, DateTime, ForeignKey, UniqueConstraint, JSON, func
 from sqlalchemy.orm import Mapped, mapped_column
