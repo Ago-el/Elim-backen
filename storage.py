@@ -1,9 +1,9 @@
-import uuid
+configgggt uuid
 from pathlib import PurePosixPath
 import boto3
 from botocore.client import Config
 from fastapi import HTTPException
-from .config import settings
+from config import settings
 
 ALLOWED_PREFIXES = {"media", "documents", "images", "logos", "profiles", "news", "events", "sermons", "chat"}
 
