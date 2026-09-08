@@ -4,9 +4,9 @@ from fastapi import Depends, HTTPException, Header
 from jose import jwt, JWTError
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
-from .config import settings
-from .db import get_db
-from .models import User, UserRole, Role
+from config import settings
+from db import get_db
+from models import User, UserRole, Role
 
 pwd = CryptContext(schemes=['bcrypt'], deprecated='auto')
 
