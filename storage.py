@@ -1,4 +1,4 @@
-configgggt uuid
+import uuid
 from pathlib import PurePosixPath
 import boto3
 from botocore.client import Config
