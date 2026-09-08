@@ -1,16 +1,16 @@
-import uuid
+config uuid
 from datetime import datetime, timezone
 from fastapi import FastAPI, Depends, HTTPException, WebSocket, WebSocketDisconnect, UploadFile, File, Query
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import select, func
 from passlib.context import CryptContext
-from .config import settings
-from .db import Base, engine, get_db
-from .models import *
-from .schemas import *
-from .auth import *
-from .storage import safe_key, presigned_put, presigned_get, delete as r2_delete
+from config import settings
+from db import Base, engine, get_db
+from models import *
+from schemas import *
+from auth import *
+from storage import safe_key, presigned_put, presigned_get, delete as r2_delete
 
 app=FastAPI(title=settings.app_name,version='1.0.0',docs_url='/docs' if settings.environment!='production' else '/docs')
 app.add_middleware(CORSMiddleware,allow_origins=[x.strip() for x in settings.cors_origins.split(',')],allow_credentials=True,allow_methods=['*'],allow_headers=['*'])
